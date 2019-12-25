@@ -1,0 +1,61 @@
+html {
+  font-family: 'Oswald', sans-serif;
+}
+body {
+  text-shadow: 2px 0px 0.5px white;
+  padding: 0;
+  background-color: #C53DD1;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  margin: 25px;
+  padding: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+  box-shadow: 15px 15px black;
+  border: 1px solid #B6B8B8;
+  margin-bottom: 25px;
+}
+.images {
+max-width: 0.5fr;
+}
+
+.text {
+  text-align: justify;
+  background-color: #B6B8B8;
+  color: black;
+  padding: 5px;
+  box-shadow: 15px 15px black;
+}
+.title {
+  display: grid;
+  text-align: center;
+  margin: 0 25%;
+  background-color: #B6B8B8;
+  color: black;
+  padding: 0;
+  margin-bottom: 25px;
+  box-shadow: 15px 15px black;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: blue;
+  }
+  .grid {
+    grid-template-columns: 1fr 4fr;
+  }
+  .text {
+    column-count: 2;
+  }
+  .text::after {
+    content: "@media marker";
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: white;
+  }
+}
